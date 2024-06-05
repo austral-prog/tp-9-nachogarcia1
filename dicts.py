@@ -29,14 +29,13 @@ def decrement_items(inventory, items):
 def remove_item(inventory, item):
     for i in range(0, len(inventory)):
         if item in inventory:
-            del inventory[i]
+            del inventory[item]
     return inventory
-
 
 def list_inventory(inventory):
     mylist = []
     for i, value in inventory.items():
         if value > 0:
-            mylist.append((value, i))
+            mylist.append((i, value))
     return mylist
 
